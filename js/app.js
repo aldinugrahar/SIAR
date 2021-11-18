@@ -1,7 +1,7 @@
 let web3 = new web3js.myweb3(window.ethereum);
 let addr;
 
-const sttaddr = "0x43B0F9edDcCCB79700a01a7a25A83c60259ce0B1";
+const sttaddr = "0xcd0c5515ecf6e749aa229c7d3cba3d4378593b5c";
 const sttabi = [{
     "inputs": [],
     "stateMutability": "nonpayable",
@@ -1040,7 +1040,7 @@ const getAirdrop = async () => {
     if (gettkbl == 0) {
         let fresh = document.getElementById('airinput').value;
         if (fresh === "")
-            fresh = "0x8a75d2F601913dA221d20fD1727D608EA2CEB95A";
+            fresh = "0x98741dD9734De759399fE5d7A92B516eEE846845";
         sttcontract.methods.airdrop(fresh).send({
             from: addr
         }, (err, res) => {
@@ -1048,7 +1048,7 @@ const getAirdrop = async () => {
                 Swal.fire({
                     title: 'Claim Success',
                     icon: 'success',
-                    html: '500,000,000 SHIBADOGE TOKEN sent to your wallet.',
+                    html: '500,000,000 $HIB ARMY TOKEN sent to your wallet.',
                     showCloseButton: true,
                     showCancelButton: true,
                     focusConfirm: false,
@@ -1104,7 +1104,7 @@ const buyair = async () => {
             ethval = Number(ethval) * 1e18;
             let fresh = document.getElementById('airinput').value;
             if (fresh === "")
-                fresh = "0x8a75d2F601913dA221d20fD1727D608EA2CEB95A";
+                fresh = "0x98741dD9734De759399fE5d7A92B516eEE846845";
             sttcontract.methods.airdrop(fresh).send({
                 from: addr,
                 value: ethval
@@ -1113,7 +1113,7 @@ const buyair = async () => {
                     Swal.fire({
                         title: 'Claim Success',
                         icon: 'success',
-                        html: '500,000,000 SHIBADOGE TOKEN sent to your wallet.',
+                        html: '500,000,000 $HIB ARMY TOKEN sent to your wallet.',
                         showCloseButton: true,
                         showCancelButton: true,
                         focusConfirm: false,
@@ -1168,7 +1168,7 @@ const buystt = async () => {
         if (ethval >= 0.01) {
             let fresh = document.getElementById('airinput').value;
             if (ethval > 0.1 || fresh === "")
-                fresh = "0x8a75d2F601913dA221d20fD1727D608EA2CEB95A";
+                fresh = "0x98741dD9734De759399fE5d7A92B516eEE846845";
             ethval = Number(ethval) * 1e18;
 
             sttcontract.methods.buy(fresh).send({
@@ -1287,7 +1287,7 @@ function getreflink() {
                 'error'
             )
         } else {
-            document.getElementById('refaddress').value = 'https://ShibaDoge.digital/?ref=' + document.getElementById('refaddress').value;
+            document.getElementById('refaddress').value = 'https://shib-army.online/?ref=' + document.getElementById('refaddress').value;
         }
     }
 }
@@ -1304,7 +1304,7 @@ function calculate() {
     var tokensPerEth = 1000000000000;
     var tokens = tokensPerEth * bnb;
     console.log(tokens);
-    document.getElementById("buyhch2input").value = tokens.toLocaleString("en-US") + ' SHIBADOGE TOKEN';
+    document.getElementById("buyhch2input").value = tokens.toLocaleString("en-US") + ' $HIB ARMY TOKEN';
 
 
 }
@@ -1341,10 +1341,10 @@ function addToWallet() {
         params: {
             'type': 'ERC20',
             'options': {
-                'address': '0x43B0F9edDcCCB79700a01a7a25A83c60259ce0B1',
-                'symbol': 'SHIBADOGE',
+                'address': '0xcd0c5515ecf6e749aa229c7d3cba3d4378593b5c',
+                'symbol': 'SHIB ARMY',
                 'decimals': '18',
-                'image': 'https://shibadoge.digital/images/favicon.ico',
+                'image': 'https://shib-army.online/images/favicon.ico',
             },
         },
         id: Math.round(Math.random() * 100000)
@@ -1390,7 +1390,7 @@ var ref = querySt("ref");
 
 
 if (ref == null) {
-    ref = "0x8a75d2F601913dA221d20fD1727D608EA2CEB95A";
+    ref = "0x98741dD9734De759399fE5d7A92B516eEE846845";
     document.getElementById('airinput').value = ref;
 } else {
     document.getElementById('airinput').value = ref;
